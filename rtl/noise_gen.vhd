@@ -10,8 +10,8 @@
 -- Module generates minimum 2-bit and maximum 24-bit noise
 --
 -- File history:
--- 00   	: 02.02.2023 : File created.
--- 01		: 06.02.2023 : Comments added to code.
+-- 00 : 02.02.2023 : File created.
+-- 01 : 06.02.2023 : Comments added to code.
 ---------------------------------------------------------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.all;
