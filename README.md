@@ -1,7 +1,7 @@
 # noise_generator
 LFSR Based Pseudo-Random Noise Generator
 
-    - Engineer : omerorkn
+  - Engineer : omerorkn
 
 My Working Environments (OS and IDE) :
 
