@@ -14,6 +14,6 @@ Module Features :
     System Clock  : 100 MHz (PARAMETRIC)
     Shift Freq    : 100 MHz (PARAMETRIC) -- for test
 
-By the way, If you would like to write all the noise data for create a line or histogram on excel, you can uncomment between line 92 - line 113 and you can use textio library for create an output text file.
+By the way, If you would like to write all the noise data for create a line or histogram on excel, you can uncomment between line 94 - line 115 in "noise_gen_tb.vhd" and you can use textio library for create an output text file.
 
 Best Regards.
