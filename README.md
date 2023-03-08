@@ -9,7 +9,7 @@ My Working Environments (OS and IDE) :
 
 Module Features :
 
-    - Data Width    : 5 (PARAMETRIC)
+    - Data Width    : 5 (PARAMETRIC)       -- min : 2 / max : 24
     - System Clock  : 100 MHz (PARAMETRIC)
     - Shift Freq    : 100 MHz (PARAMETRIC) -- for test
 
