@@ -10,7 +10,7 @@
 -- Module generates minimum 2-bit and maximum 24-bit noise
 --
 -- File history:
--- 00   : 02.02.2023 : File created.
+-- 00   	: 02.02.2023 : File created.
 -- 01		: 06.02.2023 : Comments added to code.
 ---------------------------------------------------------------------------------------------------------------------------------
 library IEEE;
@@ -18,27 +18,27 @@ use IEEE.STD_LOGIC_1164.all;
 
 entity noise_gen is
 	 generic (
-		DATA_WIDTH 	: integer := 5;                                                                                   -- noise out bit width
-		CLK_FREQ		: integer := 100_000_000;											                                                    -- system clock frequency
-		SHIFT_FREQ	: integer := 100													                    	                                  -- shifting frequency
+		DATA_WIDTH 		: integer := 5;                                                                        		-- noise out bit width
+		CLK_FREQ		: integer := 100_000_000;											                    	-- system clock frequency
+		SHIFT_FREQ		: integer := 100													                    	-- shifting frequency
 	 );                 
 	 port (                 
-	  -- Input Ports                  
-	  clk 		  : in std_logic;															                                                        -- system clock input
-	  rst_n 	  : in std_logic;															                                                        -- active low reset	
-	  en 			  : in std_logic;															                                                        -- enable trigger
+		-- Input Ports                  
+			clk 		: in std_logic;															                    -- system clock input
+			rst_n 		: in std_logic;															                    -- active low reset	
+			en 			: in std_logic;															                    -- enable trigger
                                             
 		-- Output Ports			                    
-		noise_out : out std_logic_vector(DATA_WIDTH - 1 downto 0)							                                        -- noise out port
+			noise_out 	: out std_logic_vector(DATA_WIDTH - 1 downto 0)							                    -- noise out port
 	 );
 end noise_gen;
 
 architecture rtl of noise_gen is
 
 	constant TIMER_LIM 	: integer := CLK_FREQ / SHIFT_FREQ;                                                         -- integer value for between different output values
-	signal polynomial 	: std_logic_vector(DATA_WIDTH - 1 downto 0) := (DATA_WIDTH - 1 => '1', others => '0'); 		  -- polynomial for maximum-length LFSR
-	signal timer 		    : integer range 0 to TIMER_LIM - 1 := 0;                                                    -- integer counter for time between different output values
-	signal data_reg 	  : std_logic_vector(DATA_WIDTH - 1 downto 0);                                                -- register for feedback
+	signal polynomial 	: std_logic_vector(DATA_WIDTH - 1 downto 0) := (DATA_WIDTH - 1 => '1', others => '0'); 		-- polynomial for maximum-length LFSR
+	signal timer 		: integer range 0 to TIMER_LIM - 1 := 0;                                                    -- integer counter for time between different output values
+	signal data_reg 	: std_logic_vector(DATA_WIDTH - 1 downto 0);                                                -- register for feedback
 	
 begin
 
@@ -140,8 +140,8 @@ begin
 		if (rst_n = '0') then
 			
 			data_reg 	<= polynomial;
-			noise_out <= (others => '0');
-			timer		  <= 0;
+			noise_out 	<= (others => '0');
+			timer		<= 0;
 			
 		elsif (rising_edge(clk)) then
 		
