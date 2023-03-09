@@ -47,7 +47,7 @@ architecture testbench of noise_gen_tb is
       en          : in std_logic;                                                       -- enable trigger
 
       -- Output Ports		
-      noise_out   : out std_logic_vector(DATA_WIDTH - 1 downto 0) -- noise out port
+      noise_out   : out std_logic_vector(DATA_WIDTH - 1 downto 0)                       -- noise out port
     );
   end component;
 
