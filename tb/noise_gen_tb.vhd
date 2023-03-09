@@ -51,7 +51,7 @@ architecture testbench of noise_gen_tb is
     );
   end component;
 
-  constant CLK_PERIOD : time := 1000 ms / CLK_FREQ;
+  constant CLK_PERIOD : time := 1000 ms / CLK_FREQ;                                     -- constant for clock generation
 
   signal clk            : std_logic := '1';                                             -- test signal for system clock source
   signal rst_n          : std_logic := '1';                                             -- test signal for active low reset
