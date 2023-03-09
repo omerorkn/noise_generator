@@ -11,7 +11,7 @@
 -- File history:
 -- 00   	: 02.02.2023 : File created.
 -- 01 		: 06.02.2023 : Comments added to code.
--- 02		  : 08.02.2023 : "textio" library used to write output data to a text file.
+-- 02     : 08.02.2023 : "textio" library used to write output data to a text file.
 --
 -- Note : If you would like to write all the noise data for create a line or histogram on excel, you can uncomment between line 94 - line 115 and
 -- 		  you can use textio library for create an output text file. 
@@ -25,10 +25,10 @@ use STD.TEXTIO.all;
 
 entity noise_gen_tb is
   generic (
-    DATA_WIDTH  : integer := 5;
-    CLK_FREQ    : integer := 100_000_000;
-    SHIFT_FREQ  : integer := 100_000_000;
-    FILE_NAME   : string  := "./log_file.dat"
+    DATA_WIDTH  : integer := 5;                                                         -- noise out bit width
+    CLK_FREQ    : integer := 100_000_000;                                               -- system clock frequency
+    SHIFT_FREQ  : integer := 100_000_000;                                               -- shifting frequency
+    FILE_NAME   : string  := "./log_file.dat"                                           -- file name for output text file
   );
 end noise_gen_tb;
 
