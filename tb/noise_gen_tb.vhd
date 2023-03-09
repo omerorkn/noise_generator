@@ -11,7 +11,7 @@
 -- File history:
 -- 00   	: 02.02.2023 : File created.
 -- 01 		: 06.02.2023 : Comments added to code.
--- 02     : 08.02.2023 : "textio" library used to write output data to a text file.
+-- 02    : 08.02.2023 : "textio" library used to write output data to a text file.
 --
 -- Note : If you would like to write all the noise data for create a line or histogram on excel, you can uncomment between line 94 - line 115 and
 -- 		  you can use textio library for create an output text file. 
